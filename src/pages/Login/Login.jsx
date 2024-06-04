@@ -1,9 +1,15 @@
 import React, { useState } from 'react'
 import './Login.css'
 import logo from '../../assets/logo.png'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 const Login = () => {
     const [signState,setSignState]=useState("Sign In")
+    const location = useNavigate()
+function handleClick(){
+   location('/')
+}
+
   return (
     <div className='login'>
         <img src={logo} alt="" className='login-logo' />
@@ -13,7 +19,7 @@ const Login = () => {
                {signState==="Sign Up"?<input type="text" placeholder='Your Name'/>:<></>}
                 <input type="email" placeholder='Email' />
                 <input type="password" placeholder='password'/>
-                <button>{signState}</button>
+                <button onClick={(e)=>handleClick()} >{signState}</button>
                 <div className="form-help">
                     <div className="remember">
                         <input type="checkbox" />

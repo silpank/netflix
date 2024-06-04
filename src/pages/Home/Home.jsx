@@ -25,9 +25,9 @@ export const Home = () => {
             </div>
         </div>
         <div className="more-cards"><br></br> <br></br>
-        <TitleCards title={"Blockbuster movies"} category={"top_rated"} /> <br></br> <br></br>
-        <TitleCards title={"Only on Netflix"} category={"popular"} /><br></br> <br></br>
-        <TitleCards title={"Upcoming"} category={"upcoming"} /><br></br> <br></br>
+        <TitleCards title={"Blockbuster movies"} category={"top_rated"} /> 
+        <TitleCards title={"Only on Netflix"} category={"popular"} />
+        <TitleCards title={"Upcoming"} category={"upcoming"} />
         <TitleCards title={"Top Pics for You"} category={"now_playing"} />
         </div>
         <Footer/>
