@@ -78,3 +78,12 @@ gap: 5px;
     font-weight: 500;
     cursor: pointer;
 }
+@media(max-width: 500px){
+    .login{
+        padding: 15px 5%;
+    }
+    .login-form{
+        padding: 20px;
+        margin-top: 30px;
+    }
+}
