@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Player.css'
 import back_arrow_icon from '../../assets/back_arrow_icon.png'
 import { useNavigate, useParams } from 'react-router-dom'
@@ -6,9 +6,10 @@ import { useNavigate, useParams } from 'react-router-dom'
 const Player = () => {
 
   const {id} = useParams();
+
   const navigsate = useNavigate()
 
-const [apiData,setApiData]= useEffect({
+const [apiData,setApiData]= useState({
   name: "",
   key:"",
   published_at:"",
@@ -29,7 +30,7 @@ const [apiData,setApiData]= useEffect({
     .then(response => setApiData(response.results[0]))
     .catch(err => console.error(err));
   
-  },[])
+  })
 
 
   return (

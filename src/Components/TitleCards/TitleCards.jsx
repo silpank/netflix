@@ -17,7 +17,7 @@ const TitleCards = ({ title, category }) => {
 
   const handleWheel = (event) => {
     event.preventDefault();
-    cardsRef.current.scrollLeft += event.deltaY;
+    cardsRef.current.scrollLeft += event.deltax;
   }
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const TitleCards = ({ title, category }) => {
     return () => {
       currentRef.removeEventListener('wheel', handleWheel);
     };
-  }, [category]);
+  });
 
   return (
     <div className='title-Cards'>
