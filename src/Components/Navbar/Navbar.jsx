@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import './Navbar.css' 
+import { useLocation } from 'react-router-dom'
 import logo from '../../assets/logo.png'
 import search_icon from '../../assets/search_icon.svg'
 import bell_icon from '../../assets/bell_icon.svg'
@@ -9,7 +10,7 @@ import caret_icon from '../../assets/caret_icon.svg'
 
 const Navbar = () => {
     const navRef = useRef();
-
+ const location = useLocation();
     useEffect(()=>{
         window.addEventListener('scroll',()=>{
             if(window.scrollY >= 80){
@@ -19,6 +20,9 @@ const Navbar = () => {
             }
         })
     },[])
+    if(location.pathname!=='/'){
+        return null;
+    }
   return (
     <div ref={navRef} className='navbar'>
         <div className="navbar-left">
