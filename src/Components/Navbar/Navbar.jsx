@@ -20,6 +20,7 @@ const Navbar = () => {
             }
         })
     },[])
+    
     if(location.pathname!=='/'){
         return null;
     }
