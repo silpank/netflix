@@ -7,7 +7,7 @@ const Login = () => {
     const [signState,setSignState]=useState("Sign In")
     const location = useNavigate()
 function handleClick(){
-   location('/')
+   location('/home')
 }
 
   return (
