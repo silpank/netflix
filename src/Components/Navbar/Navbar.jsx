@@ -27,7 +27,7 @@ const Navbar = () => {
   }, []);
 
   // Only render the navbar if the current path is '/'
-  if (location.pathname !== '/') {
+  if (location.pathname !== '/home') {
     return null;
   }
 
