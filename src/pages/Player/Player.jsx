@@ -33,7 +33,7 @@ const Player = () => {
 
   return (
     <div className='player'>
-      <img className='player-img' src={back_arrow_icon} alt="" onClick={() => { navigate('/') }} />
+      <img className='player-img' src={back_arrow_icon} alt="" onClick={() => { navigate('/home') }} />
       <div className="player-video">
         <iframe width='90%' height='90%' src={`https://www.youtube.com/embed/${apiData.key}`} title='trailer' frameBorder='0' allowFullScreen></iframe>
         <div className="player-info">
